@@ -14,6 +14,9 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`dummy(...)`](#dummy)
+* [`verifyAppIntegrity()`](#verifyappintegrity)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -33,5 +36,41 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
 --------------------
+
+
+### dummy(...)
+
+```typescript
+dummy(options: DummyParams) => Promise<string>
+```
+
+| Param         | Type                                                |
+| ------------- | --------------------------------------------------- |
+| **`options`** | <code><a href="#dummyparams">DummyParams</a></code> |
+
+**Returns:** <code>Promise&lt;string&gt;</code>
+
+--------------------
+
+
+### verifyAppIntegrity()
+
+```typescript
+verifyAppIntegrity() => Promise<{ token: string; auth: boolean; }>
+```
+
+**Returns:** <code>Promise&lt;{ token: string; auth: boolean; }&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### DummyParams
+
+| Prop          | Type                |
+| ------------- | ------------------- |
+| **`message`** | <code>string</code> |
 
 </docgen-api>
