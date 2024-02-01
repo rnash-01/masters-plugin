@@ -2,11 +2,11 @@ import { WebPlugin } from '@capacitor/core';
 import { v4 as uuidv4 } from 'uuid';
 
 import type {
-	   ExamplePlugin,
+  AppAuthPlugin,
 	   DummyParams,
 } from './definitions';
 
-export class ExampleWeb extends WebPlugin implements ExamplePlugin {
+export class AppAuthWeb extends WebPlugin implements AppAuthPlugin {
   async echo(options: { value: string }): Promise<{ value: string }> {
     console.log('ECHO', options);
     return options;

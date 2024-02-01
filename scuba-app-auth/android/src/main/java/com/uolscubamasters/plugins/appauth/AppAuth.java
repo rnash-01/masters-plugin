@@ -1,8 +1,8 @@
-package com.mycompany.plugins.example;
+package com.uolscubamasters.plugins.appauth;
 
 import android.util.Log;
 
-public class Example {
+public class AppAuth {
 
     public String echo(String value) {
         Log.i("Echo", value);

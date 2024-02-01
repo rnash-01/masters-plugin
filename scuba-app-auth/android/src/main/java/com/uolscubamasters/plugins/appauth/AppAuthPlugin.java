@@ -1,4 +1,4 @@
-package com.mycompany.plugins.example;
+package com.uolscubamasters.plugins.appauth;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -6,10 +6,10 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "Example")
-public class ExamplePlugin extends Plugin {
+@CapacitorPlugin(name = "AppAuth")
+public class AppAuthPlugin extends Plugin {
 
-    private Example implementation = new Example();
+    private AppAuth implementation = new AppAuth();
 
     @PluginMethod
     public void echo(PluginCall call) {
