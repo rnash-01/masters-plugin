@@ -22,4 +22,16 @@ class AppAuthTests: XCTestCase {
 
         XCTAssertEqual(value, result)
     }
+
+	func testVerifyAppIntegrity() {
+		 let implementation = AppAuth()
+		 let value = [
+		 	 "auth": true,
+			 "token": "iOS_test"
+		 ]
+		 let result = implementation.verifyAppIntegrity()
+
+		 XCTAssertEqual(value["auth"], result["auth"]);
+		 XCTAssertEqual(value["token"], result["token"]);
+	}
 }

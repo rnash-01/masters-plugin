@@ -19,4 +19,12 @@ public class AppAuthPlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+	@PluginMethod
+	public void verifyAppIntegrity(PluginCall call) {
+		JSObject ret = new JSObject();
+		ret.put("auth", true);
+		ret.put("token", "ANDROID_TEST");
+		call.resolve(ret);
+	}
 }
