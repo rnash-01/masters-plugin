@@ -1,0 +1,6 @@
+def test_function(param):
+    print(param)
+
+def test_function_2(param):
+    return param
+
