@@ -14,7 +14,6 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
-* [`dummy(...)`](#dummy)
 * [`verifyAppIntegrity()`](#verifyappintegrity)
 * [Interfaces](#interfaces)
 
@@ -38,28 +37,13 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 --------------------
 
 
-### dummy(...)
-
-```typescript
-dummy(options: DummyParams) => Promise<string>
-```
-
-| Param         | Type                                                |
-| ------------- | --------------------------------------------------- |
-| **`options`** | <code><a href="#dummyparams">DummyParams</a></code> |
-
-**Returns:** <code>Promise&lt;string&gt;</code>
-
---------------------
-
-
 ### verifyAppIntegrity()
 
 ```typescript
-verifyAppIntegrity() => Promise<{ token: string; auth: boolean; }>
+verifyAppIntegrity() => Promise<AppAuthObj>
 ```
 
-**Returns:** <code>Promise&lt;{ token: string; auth: boolean; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#appauthobj">AppAuthObj</a>&gt;</code>
 
 --------------------
 
@@ -67,10 +51,12 @@ verifyAppIntegrity() => Promise<{ token: string; auth: boolean; }>
 ### Interfaces
 
 
-#### DummyParams
+#### AppAuthObj
 
-| Prop          | Type                |
-| ------------- | ------------------- |
-| **`message`** | <code>string</code> |
+| Prop           | Type                 |
+| -------------- | -------------------- |
+| **`token`**    | <code>string</code>  |
+| **`auth`**     | <code>boolean</code> |
+| **`platform`** | <code>string</code>  |
 
 </docgen-api>

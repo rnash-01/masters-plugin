@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import type {
   AppAuthPlugin,
-	   DummyParams,
+  AppAuthObj,
 } from './definitions';
 
 export class AppAuthWeb extends WebPlugin implements AppAuthPlugin {
@@ -12,14 +12,13 @@ export class AppAuthWeb extends WebPlugin implements AppAuthPlugin {
     return options;
   }
 
-  async verifyAppIntegrity(): Promise<{ token: string; auth: boolean; }> {
+  async verifyAppIntegrity(): Promise<AppAuthObj> {
       return Promise.resolve({
         token: uuidv4(),
-        auth: true
+        platform: "web",
+        auth: true,
+        error: ""
       });
   }
 
-  async dummy(options: DummyParams): Promise<string> {
-  		return options.message;
-  }
 }

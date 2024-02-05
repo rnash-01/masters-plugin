@@ -1,6 +1,7 @@
 import Foundation
 import Capacitor
 import StoreKit
+import Foundation
 /**
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
@@ -17,9 +18,12 @@ public class AppAuthPlugin: CAPPlugin {
     }
 
     @objc func verifyAppIntegrity(_ call: CAPPluginCall) {
+        // This will need to be fully implemented when App Store account
+        // is set up.
         call.resolve([
             "auth": true,
-            "token": "test"
+			"platform": "ios",
+            "token": UUID().uuidString()
         ]);
     }
 }

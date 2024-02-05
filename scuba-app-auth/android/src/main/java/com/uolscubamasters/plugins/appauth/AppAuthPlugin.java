@@ -5,6 +5,7 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+//import java.util.UUID;
 
 @CapacitorPlugin(name = "AppAuth")
 public class AppAuthPlugin extends Plugin {
@@ -22,9 +23,21 @@ public class AppAuthPlugin extends Plugin {
 
 	@PluginMethod
 	public void verifyAppIntegrity(PluginCall call) {
-		JSObject ret = new JSObject();
-		ret.put("auth", true);
-		ret.put("token", "ANDROID_TEST");
-		call.resolve(ret);
+        IntegrityResponse ir = implementation.verifyAppIntegrity();
+        JSObject ret = new JSObject();
+
+        try {
+
+            ret.put("auth", ir.getAuth());
+            ret.put("token", ir.getToken());
+            ret.put("platform", "android");
+            ret.put("error", ir.getError());
+            call.resolve(ret);
+        }
+        catch (Exception e) {
+            call.reject(e.getMessage());
+        }
+		
 	}
 }
+
