@@ -23,7 +23,8 @@ public class AppAuthPlugin: CAPPlugin {
         call.resolve([
             "auth": true,
 			"platform": "ios",
-            "token": UUID().uuidString()
+            "token": UUID().uuidString(),
+            "error": ""
         ]);
     }
 }
