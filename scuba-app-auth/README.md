@@ -58,5 +58,6 @@ verifyAppIntegrity() => Promise<AppAuthObj>
 | **`token`**    | <code>string</code>  |
 | **`auth`**     | <code>boolean</code> |
 | **`platform`** | <code>string</code>  |
+| **`error`**    | <code>string</code>  |
 
 </docgen-api>
